@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Check if array is sorted and roated</h2>
+</body>
+<script>
+    /**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var check = function(nums) {
+    let length = nums.length;
+    let A = nums;
+    let B = [];
+    let x =0 ;
+
+    for (let i = 0; i < length; i++){
+        if(A[i] > A[i+1]) {
+            x = i +1;
+            break;
+        }  
+    } 
+   let y = x;
+    while(y < length) {
+        B.push(A[y])
+        y++;
+    }
+
+    for (let j = 0; j <x; j++){
+        B.push(A[j]);
+    }
+    console.log(B);
+
+    /* B.forEach((e, i, arr) => {
+        if(arr[i+1] < arr[i]) {
+            return false;
+        }
+     return true;
+    }) */
+
+    for (let k = 0; k < length; k++) {
+        if(B[k+1] < B[k]) {
+            return false;
+            break;
+        }
+    }
+    return true;
+
+};
+console.log(check([3,4,5,1,2]));
+
+</script>
+</html>
