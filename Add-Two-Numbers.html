@@ -15,14 +15,18 @@ var addTwoNumbers = function(l1, l2) {
     let num2 = l2.reverse().join('')
     let sum = (Number(num1)+ Number(num2)).toString(); // 807
     //  ["7","0","8"]
-    result.push()
-
-
-
+    let length = sum.length;
+    while (length > 0) {
+        result.push(sum[length-1]);
+        length--;
+    }
+    
+return result;
 };
 
 var l1 = [2,4,3], l2 = [5,6,4];
 const  result = addTwoNumbers(l1, l2);
+console.log(result);
 
 </script>
 </html>

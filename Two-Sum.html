@@ -20,7 +20,7 @@ var twoSum = function(nums, target) {
     for (var i = 0; i < length-1; i++) {
         for (var j = i+1; j <length; j++) {
             if(nums[i] + nums[j] == target) {
-                arr.push(nums[i], nums[j])
+                arr.push(i, j);
                 return  arr
             }
         }
